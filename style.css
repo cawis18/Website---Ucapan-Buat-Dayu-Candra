@@ -1,0 +1,395 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Memberikan efek tekstur kertas abu-abu tipis */
+    background-color: #fdfdfd;
+    background-image: url('https://www.transparenttextures.com/patterns/p6.png');
+    padding-bottom: 150px; /* Semakin besar angkanya, semakin naik kontennya */
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.card {
+    text-align: center;
+    max-width: 600px;
+    padding: 10px;
+}
+
+/* Gambar Gajah */
+.illustration img {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Gaya Huruf */
+.greeting {
+    font-size: 48px;
+    font-family: 'Georgia', serif; /* Menggunakan serif agar mirip desain */
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 36px;
+    color: #ff4d4d; /* Warna merah/pink pastel */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Gaya Tombol */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Jarak antar tombol */
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-green {
+    background-color: #4dfa51; /* Warna hijau neon */
+
+    /* Menghilangkan garis bawah */
+    text-decoration: none; 
+        
+    /* Menghilangkan warna biru default link (opsional, ganti ke hitam/putih) */
+    color: #000; 
+    
+    /* Membuat konten di dalamnya menjadi flexbox */
+    display: inline-flex; 
+        
+    /* Menengahkan secara vertikal (atas-bawah) */
+    align-items: center; 
+    
+    /* Menengahkan secara horizontal (kiri-kanan) */
+    justify-content: center; 
+
+    /* Pastikan tinggi dan lebar sudah ditentukan */
+    width: 120px;
+    height: 50px;
+    
+    /* Tambahan agar teks terlihat lebih rapi */
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.btn-green:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.btn-gray {
+    /* Menghilangkan garis bawah link */
+    text-decoration: none; 
+    
+    /* Warna teks (sesuaikan jika ingin hitam atau abu tua) */
+    color: #333; 
+
+    /* Layout agar teks tepat di tengah */
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+
+    /* Ukuran tombol */
+    width: 2000px; /* Lebih lebar sesuai desain halaman kedua */
+    height: 55px;
+    
+    /* Warna latar dan Border Merah sesuai gambar */
+    background-color: #d1d8e0; 
+
+    /* Font dan Transisi */
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efek saat kursor di atas tombol */
+.btn-gray:hover {
+    transform: scale(1.05);
+    background-color: #c2c9d1; /* Sedikit lebih gelap saat hover */
+}
+
+/* Menghilangkan outline biru saat diklik (opsional untuk kebersihan desain) */
+.btn-gray:focus {
+    outline: none;
+}
+
+/*=========================================== halaman tidak lanjut ========================================= */
+
+
+/* Styling Khusus Halaman 2 */
+.page-2 {
+    margin-top: 5vh; /* Menjaga posisi tetap agak ke atas sesuai keinginan sebelumnya */
+}
+
+/* Memperbesar gambar gajah sedikit agar proporsional */
+.page-2 .illustration img {
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.question-v2 {
+    font-size: 18px;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin-bottom: 40px;
+    max-width: 500px; /* Menjaga agar teks tidak terlalu lebar */
+}
+
+/* Memastikan tombol berada di tengah */
+.button-group-single {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-gray-large {
+    /* Menghilangkan dekorasi default link */
+    text-decoration: none;
+    color: #333; /* Warna teks gelap */
+
+    /* Penting: Agar elemen a bisa diatur ukurannya dan teks berada di tengah */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Styling sesuai desain */
+    width: 160px;
+    height: 55px;
+    background-color: #d1d8e0;
+    border-radius: 20px;
+    
+    /* Spacing dan Font */
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efek saat diarahkan kursor */
+.btn-gray-large:hover {
+    transform: scale(1.05);
+    background-color: #c2c9d1;
+}
+
+
+/*=========================================== halaman lanjut ========================================= */
+
+/* Container Utama untuk Perkenalan */
+.container-intro {
+    display: flex;
+    flex-direction: row; /* Gajah dan Kolom Bubble tetap bersampingan */
+    align-items: flex-start; 
+    gap: 10px;
+}
+.bubble-column {
+    display: flex;
+    flex-direction: column; /* MEMAKSA bubble berderet ke bawah */
+    align-items: flex-start; /* Membuat bubble rata kiri */
+}
+
+/* Ukuran Gajah */
+.character img {
+    width: 400px; /* Ukuran gajah lebih besar di halaman ini */
+    height: auto;
+}
+
+/* Styling Gelembung Percakapan */
+.speech-bubble {
+    background-color: #BD275E; /* Warna abu-abu sesuai desain */
+    padding: 30px 40px;
+    border-radius: 30px 30px 30px 0px;
+    position: relative;
+    max-width: 400px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+}
+.bubble-new {
+    background-color: #c2c9d1; 
+    animation: slideIn 0.5s ease-out; /* Animasi saat muncul */
+}
+
+.teks-pemberitahuan{
+    color: #333;
+    margin-right: 50px;
+}
+
+.speech-bubble p {
+    font-size: 22px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Variasi Tombol Abu-abu (btn-gray) untuk konsistensi */
+.btn-gray {
+    text-decoration: none;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    background-color: #d1d8e0;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-gray:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#pesan-rahasia {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+}
+
+.img-link {
+    display: inline-block; /* Agar link mengikuti ukuran gambar */
+    text-decoration: none; /* Menghilangkan garis bawah jika ada */
+    transition: transform 0.3s ease; /* Efek halus saat di-hover */
+}
+
+.img-link img {
+    width: 100px; /* Atur lebar gambar sesuai kebutuhan */
+    display: block; /* Menghilangkan celah kecil di bawah gambar */
+    border-radius: 10px; /* Opsional: membuat sudut gambar melengkung */
+}
+
+/* Efek Interaktif */
+.img-link:hover {
+    transform: scale(1.05); /* Gambar sedikit membesar saat disentuh kursor */
+    opacity: 0.9; /* Gambar sedikit memudar */
+}
+
+
+
+
+/* Reset Dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Warna background abu terang bersih */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper agar konten tidak nempel ke pinggir layar HP */
+.page-wrapper {
+    padding: 40px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Kotak Pesan (Square Bubble) */
+.note-box {
+    background-color: #BD275E; /* Warna abu sesuai desain Anda */
+    width: 100%;
+    max-width: 550px; /* Batas lebar agar tidak terlalu melar */
+    padding: 40px;    /* Ruang dalam agar teks tidak mepet ke border */
+    border: 2px solid #333;
+    border-radius: 4px; /* Kotak biasa sesuai permintaan */
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.1); /* Bayangan estetik */
+    position: relative;
+}
+
+/* Header & Teks */
+.note-header {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    padding-bottom: 10px;
+}
+
+.note-content p {
+    font-size: 16px;
+    line-height: 1.8; /* Jarak baris agar nyaman dibaca */
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: justify; /* Biar rapi kanan-kiri */
+}
+
+.note-content b{
+    color: #ffffff;
+}
+
+.note-footer p {
+    color: white;
+}
+
+.note-footer {
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Gajah di Pojok */
+.fixed-elephant {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.fixed-elephant img {
+    width: 350px; /* Ukuran gajah proporsional */
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+    .note-box {
+        padding: 25px;
+    }
+    .fixed-elephant img {
+        width: 60px;
+    }
+}

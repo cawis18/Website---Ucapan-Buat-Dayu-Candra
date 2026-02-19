@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yakin Nih?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card page-2">
+        <div class="illustration">
+            <img src="stitch malas.png" alt="Surprised Elephant">
+        </div>
+
+        <p class="question-v2">Yakin nih?? nanti stitch marah tauu, jadi saranku sih lanjut yaaaa</p>
+
+        <div class="button-group-single">
+            <a href="index.html" class="btn btn-gray-large">Gajadi deh...</a>
+        </div>
+    </div>
+
+    <script>
+        function handleExit(event, nextUrl) {
+    event.preventDefault(); // Tahan perpindahan halaman
+    
+    // Tambahkan class atau style untuk memudar
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    // Pindah halaman setelah animasi selesai
+    setTimeout(() => {
+        window.location.href = nextUrl;
+    }, 500);
+}
+    </script>
+</body>
+</html>

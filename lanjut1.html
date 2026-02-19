@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-intro">
+        <div class="character">
+            <img src="stitch 2.png" style="width: 400px;">
+        </div>
+    
+        <div class="bubble-column">
+            <div class="speech-bubble">
+                <p>yeayyy mamaciii yaa, sudah mau lanjutin ini , btw kenalin aku stitch utusan dawis buat jadi pemandu kamu disiniii</p>
+            </div>
+    
+            <div id="bubble-2" class="teks-pemberitahuan" style="display: none;">
+                <h3>klik dimana saja</h3>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        document.body.addEventListener('click', function() {
+            window.location.href = 'lanjut2.html'; // Ganti dengan nama file tujuan Anda
+        });
+    </script>
+
+<script>
+    setTimeout(function() {
+        const bubble2 = document.getElementById('bubble-2');
+        bubble2.style.display = 'block';
+    }, 3000); // 5000ms = 5 detik
+</script>
+
+
+<script>
+    function handleExit(event, nextUrl) {
+event.preventDefault(); // Tahan perpindahan halaman
+
+// Tambahkan class atau style untuk memudar
+document.body.style.opacity = '0';
+document.body.style.transition = 'opacity 0.5s ease';
+
+// Pindah halaman setelah animasi selesai
+setTimeout(() => {
+    window.location.href = nextUrl;
+}, 500);
+}
+</script>
+
+</body>
+</html>

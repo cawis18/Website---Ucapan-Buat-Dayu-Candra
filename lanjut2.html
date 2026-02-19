@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkenalan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-intro">
+        <div class="character">
+            <img src="stitch 2.png" style="width: 400px;">
+        </div>
+    
+        <div class="bubble-column">
+            <div class="speech-bubble">
+                <p>yeayyy mamaciii yaa, sudah mau lanjutin ini , btw kenalin aku stitch utusan dawis buat jadi pemandu kamu disiniii</p>
+            </div>
+    
+            <a href="lanjut3.html" class="img-link">
+                <img src="teks.png" alt="Deskripsi Gambar">
+            </a>
+
+        </div>
+    </div>
+
+    <script>
+        function handleExit(event, nextUrl) {
+    event.preventDefault(); // Tahan perpindahan halaman
+    
+    // Tambahkan class atau style untuk memudar
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    // Pindah halaman setelah animasi selesai
+    setTimeout(() => {
+        window.location.href = nextUrl;
+    }, 500);
+}
+    </script>
+
+</body>
+</html>
